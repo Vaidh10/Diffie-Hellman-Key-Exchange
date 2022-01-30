@@ -1,11 +1,5 @@
 # Understanding Diffie-Hellman Key Exchange
 
-from Crypto.Util.number import *
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad, unpad
-import hashlib
-import os
-
 def pickSecretKey(p):
     a = getRandomRange(3,p-2)
     while GCD(a,p-1) != 1:
